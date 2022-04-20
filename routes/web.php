@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +28,7 @@ Route::get("/",[HomeController::class,"index"])->name("home");
 Route::get('/test',[HomeController::class,'test'])->name('test');
 
 //5-Route With Parameters
+
 Route::get('/param/{id}/{number}',[HomeController::class,'param'])->name('param');
 
 //6-Route With Post
@@ -37,3 +38,6 @@ Route::post('/save',[HomeController::class,'save'])->name('save');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+// *****************ADMİN PANEL ROUTES**************
+Route::get("/admin",[AdminHomeController::class,"index"])->name("admin");
+
