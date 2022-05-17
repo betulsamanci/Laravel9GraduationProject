@@ -45,6 +45,7 @@
 
 @include("home.footer")
 @yield('foot')
+
 @section('sidebar')
     @include("home.sidebar")
 @show
