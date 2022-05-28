@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminPanel\AdminProjectController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
+use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +19,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 Route::get('/hello', function () {
     return 'Hello World';
 });
+
 //2-Call View In Route
 Route::get('/welcome', function () {
     return view('welcome');
@@ -38,9 +41,44 @@ Route::post('/save',[HomeController::class,'save'])->name('save');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
 // *****************ADMİN PANEL ROUTES**************
-Route::get("/admin",[AdminHomeController::class,"index"])->name("admin");
+Route::prefix('admin')->name('admin.')->group( callback: function (){
+    Route::get("/",[AdminHomeController::class,"index"])->name("index");
+
+
+
 
 // *****************ADMİN CATEGORY ROUTES**************
-Route::get("/admin/category",[\App\Http\Controllers\AdminPanel\CategoryController::class,"index"])->name("admin_category");
-Route::get("/admin/category/create",[\App\Http\Controllers\AdminPanel\CategoryController::class,"create"])->name("admin_category_create");
+    Route::prefix('/category')->name('category.')->controller(AdminCategoryController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store','store')->name('store');
+        Route::get('/edit/{id}', 'edit')->name('edit');
+        Route::post('/update/{id}','update')->name('update');
+        Route::get('/destroy/{id}','destroy')->name('destroy');
+        Route::get('/show/{id}','show')->name('show');
+    });
+
+
+// *****************ADMİN PROJECT ROUTES**************
+    Route::prefix('/project')->name('project.')->controller(AdminProjectController::class)->group(function (){
+        Route::get('/','index')->name('index');
+        Route::get("/create","create")->name("create");
+        Route::post("/store","store")->name("store");
+        Route::get("/edit/{id}","edit")->name("edit");
+        Route::post("/update/{id}","update")->name("update");
+        Route::get("/destroy/{id}","destroy")->name("destroy");
+        Route::get("/show/{id}","show")->name("show");
+    });
+});
+
+// *****************ADMİN PROJECT IMAGE GALLERY ROUTES**************
+Route::prefix('/image')->name('image.')->controller(ImageController::class)->group(function (){
+    Route::get('/{pid}','index')->name('index');
+    Route::get("/create/{pid}","create")->name("create");
+    Route::post("/store/{pid}","store")->name("store");
+    Route::post("/update/{pid}/{id}","update")->name("update");
+    Route::get("/destroy/{pid}/{id}","destroy")->name("destroy");
+});
