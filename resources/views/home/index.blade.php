@@ -135,73 +135,24 @@
             </div>
         </div>
     </div>
+    @foreach($projectlist1 as $rs)
     <div class="product-bg">
         <div class="product-bg-white">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p1.png"/></i>
+                            <i><img src="{{Storage::url($rs->image)}}"/></i>
                             <h3>Norton Internet Security</h3>
                             <span>$25.00</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p2.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p3.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p4.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p5.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p2.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p6.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="product-box">
-                            <i><img src="{{asset('assets')}}/icon/p7.png"/></i>
-                            <h3>Norton Internet Security</h3>
-                            <span>$25.00</span>
-                        </div>
-                    </div>
-
-
-
-
                 </div>
             </div>
         </div>
+        @endforeach
+
+
         <div class="Clients_bg_white">
             <div class="container">
                 <div class="row">

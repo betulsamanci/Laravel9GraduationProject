@@ -41,7 +41,6 @@
                             <input class="form-control" name="description" value="{{$data->description}}">
                         </div>
 
-
                             <div class="form-group">
                                 <label>Detail</label>
                                 <textarea class="form-control"  id="detail" name="detail">{!!$data->detail!!} </textarea>
@@ -57,13 +56,10 @@
                                     } );
                             </script>
                             </div>
-
                             <div class="form-group">
-
                             <label>image input</label>
                             <input type="file" name="image" >
                         </div>
-
 
                         <div class="form-group">
                             <label>Status</label>

@@ -57,6 +57,7 @@
 
                                 <tr>
                                     <th style="width: 30px">Id</th>
+
                                     <td> @if ($data->image)
                                             <img src="{{Storage::url($data->image)}}"  style="height:100px">
                                         @endif

@@ -48,10 +48,9 @@
                                         <td>{{$rs->title}}</td>
                                         <td>
                                             @if ($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}" style="height:100px">
+                                                <img src="{{Storage::url($rs->image)}}" style="height: 50px">
                                             @endif
                                         </td>
-
                                         <td>
                                         <a href="{{route('admin.image.destroy',['pid'=>$project->id,'id'=>$rs->id])}}"class="btn btn-danger btn-xs"
                                                onclick="return confirm('Deleting are you sure?')">DELETE</a>

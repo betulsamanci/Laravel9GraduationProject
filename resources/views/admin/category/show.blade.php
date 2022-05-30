@@ -67,10 +67,6 @@
                                     <td>{{$data->updated_at}}</td>
                                 </tr>
 
-
-
-
-
                             </table>
                         </div>
                     </div>

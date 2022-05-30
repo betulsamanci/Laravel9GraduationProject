@@ -42,7 +42,7 @@
                                         <td>{{$rs->detail}}</td>
                                         <td>
                                             @if ($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}"  style="height:50px">
+                                                <img src="{{Storage::url($rs->image)}}" style="height: 50px">
                                             @endif
                                         </td>
                                         <td><a href="{{route('admin.image.index',['pid'=>$rs->id])}}"

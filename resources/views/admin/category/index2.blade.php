@@ -40,10 +40,9 @@
                                         <td>{{$rs->detail}}</td>
                                         <td>
                                             @if ($rs->image)
-                                                <img src="{{Storage::url($rs->image)}}"  style="height:50px">
+                                                <img src="{{Storage::url($rs->image)}}" style="height: 50px">
                                             @endif
                                         </td>
-
                                         <td>{{$rs->status}}</td>
                                         <td><a href="{{route('admin.project.edit',['id'=>$rs->id])}}" class="btn btn-danger btn-sm">Edit</a></td>
                                         <td><a href="{{route('admin.project.destroy',['id'=>$rs->id])}}" class="btn btn-success btn-sm" onclick="return confirm('Deleting !! Are you sure?')">Delete</a></td>
