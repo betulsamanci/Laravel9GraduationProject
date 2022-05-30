@@ -1,6 +1,9 @@
 @extends('layouts.adminbase')
 
 @section('title','Add Project')
+@section('head')
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+@endsection
 
 @section('content')
     <!-- /. NAV SIDE  -->
@@ -49,7 +52,18 @@
 
                         <div class="form-group">
                             <label>Detail</label>
-                            <input class="form-control" name="detail"  placeholder="Please Enter detail">
+                            <input class="form-control" name="detail" id="detail"  placeholder="Please Enter detail">
+
+                        <script>
+                            ClassicEditor
+                                .create( document.querySelector( '#detail' ) )
+                                .then( editor => {
+                                    console.log( editor );
+                                } )
+                                .catch( error => {
+                                    console.error( error );
+                                } );
+                        </script>
                         </div>
 
                         <div class="form-group">

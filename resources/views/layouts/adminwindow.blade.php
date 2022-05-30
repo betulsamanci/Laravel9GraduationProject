@@ -16,11 +16,11 @@
     @yield('head')
 </head>
 <body>
-@include('admin.header')
-@include('admin.sidebar')
+
 @yield('content')
-@include('admin.footer')
-@yield('foot')
+
+
+ @yield('footer')
 
 </body>
 </html>

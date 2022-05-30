@@ -52,14 +52,15 @@
                                 </tr>
                                 <tr>
                                     <th style="width: 30px">Detail</th>
-                                    <td>{{$data->detail}}</td>
+                                    <td>{{!! $data->detail !!}}</td>
                                 </tr>
 
                                 <tr>
                                     <th style="width: 30px">Id</th>
                                     <td> @if ($data->image)
                                             <img src="{{Storage::url($data->image)}}"  style="height:100px">
-                                        @endif</td>
+                                        @endif
+                                    </td>
                                 </tr>
 
                                 <tr>

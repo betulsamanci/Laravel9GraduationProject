@@ -1,7 +1,10 @@
 @extends('layouts.adminbase')
 
 @section('title','Edit Project :'.$data->title)
-
+@section('head')
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endsection
 @section('content')
     <!-- /. NAV SIDE  -->
     <div id="page-wrapper" >
@@ -41,7 +44,18 @@
 
                             <div class="form-group">
                                 <label>Detail</label>
-                                <input class="form-control" name="detail" value="{{$data->detail}}"  placeholder="Please Enter detail">
+                                <textarea class="form-control"  id="detail" name="detail">{!!$data->detail!!} </textarea>
+
+                                <script>
+                                ClassicEditor
+                                    .create( document.querySelector( '#detail' ) )
+                                    .then( editor => {
+                                        console.log( editor );
+                                    } )
+                                    .catch( error => {
+                                        console.error( error );
+                                    } );
+                            </script>
                             </div>
 
                             <div class="form-group">
@@ -74,6 +88,7 @@
     <!-- /. PAGE WRAPPER  -->
     </div>
 
+
     <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
@@ -84,4 +99,12 @@
     <script src="{{asset('assets')}}/assets/admin/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
     <script src="{{asset('assets')}}/assets/admin/js/custom.js"></script>
+@endsection
+@section('foot')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+    $(function() {
+        $('.textarea').summernote()
+    })
+    </script>
 @endsection
