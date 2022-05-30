@@ -8,16 +8,14 @@
         .mySlides {display:none;}
     </style>
     <body>
-
+    <h2 class="w3-center">Manual Slideshow</h2>
     @foreach($sliderdata as $rs)
-    <div class="w3-content w3-display-container">
-        <img class="mySlides" src="{{Storage::url($rs->image)}}" style="width:800px;height:475px">
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-
-        <h1>{{$rs->title}}</h1>
-    </div>
-    @endforeach
+        <div class="w3-content w3-display-container" style="height: 100px; width:500px;">
+            <img class="mySlides" src="{{Storage::url($rs->image)}}" style="width:100%">
+            @endforeach
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
 
     <script>
         var slideIndex = 1;
