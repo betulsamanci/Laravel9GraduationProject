@@ -78,7 +78,7 @@
             </div>
             <hr />
 
-        </div>
+        </div>f
         <!-- /. PAGE INNER  -->
     </div>
     <!-- /. PAGE WRAPPER  -->

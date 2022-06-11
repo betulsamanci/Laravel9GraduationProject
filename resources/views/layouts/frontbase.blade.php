@@ -10,9 +10,12 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
     <title>@yield("title")</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="@yield("description")">
+    <meta name="keywords" content="@yield("keywords")">
+    <meta name="author" content="@yield("Betul Samanci")">
+    <link rel="icon"  type="image/x-icon" href="@yield("icon")">
+
+
     <!-- bootstrap css -->
     <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
     <!-- style css -->
@@ -40,6 +43,7 @@
 </head>
 
 <body>
+
 @include("home.header")
 
 @yield('slider')
@@ -49,8 +53,6 @@
 @include("home.footer")
 @yield('foot')
 
-@section('sidebar')
-    @include("home.sidebar")
 @show
 </body>
 </html>

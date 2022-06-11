@@ -24,8 +24,12 @@ Route::get('/hello', function () {
 Route::get('/welcome', function () {
     return view('welcome');
 });
-//3-Call Controller Function
-Route::get("/",[HomeController::class,"index"])->name("home");
+//3-HOME PAGE ROUTES
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('/about',[HomeController::class,'about'])->name('about');
+Route::get('/references',[HomeController::class,'references'])->name('references');
+Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+
 
 //4-Route-> Controller-> View
 Route::get('/test',[HomeController::class,'test'])->name('test');
@@ -41,6 +45,12 @@ Route::get('/project/{id}',[HomeController::class, 'project'])->name('project');
 Route::get('/projects',[HomeController::class, 'projects'])->name('projects');
 
 
+Route::view('/loginuser','home.login');
+Route::view('/registeruser','home.register');
+Route::get('/logoutuser',[HomeController::class,'logout'])->name('logoutuser');
+Route::get('/loginadmin',[HomeController::class,'loginadmin'])->name('loginadmin');
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -50,7 +60,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('admin')->name('admin.')->group( callback: function (){
     Route::get("/",[AdminHomeController::class,"index"])->name("index");
 
-
+    // *****************GENERAL ROUTES**************
+    Route::get('/setting',[adminhomecontroller::class, 'setting'])->name('setting');
+    Route::post('/setting',[adminhomecontroller::class, 'settingupdate'])->name('setting.update');
 
 
 // *****************ADMİN CATEGORY ROUTES**************

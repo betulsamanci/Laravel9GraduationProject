@@ -1,5 +1,5 @@
 <!-- header -->
-<header>
+<header xmlns="http://www.w3.org/1999/html">
     <!-- header inner -->
     <div class="header">
         <div class="head_top">
@@ -42,15 +42,33 @@
                                     <li> <a href="{{route('projects')}}">Project</a> </li>
                                     <li> <a href="blog.html"> Blog</a> </li>
                                     <li> <a href="contact.html">Contact</a> </li>
-                                    <li class="mean-last"> <a href="#contact">signup</a> </li>
+                                    <li>@auth
+                                            <a href="/logout" class="text-uppercase"> Logout</a> @endauth </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                    <li><a class="buy" href="#">Login</a></li>
-                </div>
+                @auth
+                    <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+                        <div class="header-btns-icon">
+                            <i class="fa-fa-user-o"></i>
+                        </div>
+                        <strong class="text-uppercase">{{Auth::user()->name}} <i class="fa fa-caret-down"></i></strong>
+                    </div>
+                @endauth
+                @guest <a class="text-uppercase" href="/loginuser" >Login</a>/<a href="/registeruser" class="text-uppercase">Register</a>
+                @endguest
+                <ul class="custom-menu">
+                    <li><a href="#"><i class="fa fa-user-o"></i>My Account</a></li>
+                    <li><a href="#"><i class="fa fa-heart-o"></i>My wishlist</a></li>
+                    <li><a href="#"><i class="fa fa-exchange"></i>Compare</a></li>
+                    <li><a href="#"><i class="fa fa-check"></i>Checkout</a></li>
+                    <li><a href="#"><i class="fa fa-unlock-alt"></i>Login</a></li>
+                    <li><a href="#"><i class="fa fa-user-plus"></i>Create an Account</a></li>
+
+                </ul>
+                </li>
             </div>
         </div>
         <!-- end header inner -->
