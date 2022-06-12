@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','project list')
+@section('title','Faq list')
 
 @section('content')
 
@@ -9,13 +9,13 @@
         <div id="page-inner">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Product list</h2>
+                    <h2>Faq list</h2>
                     <br>
                     <a href="{{route('admin.faq.create')}}" class="btn btn-default btn-lg  ">Add question</a>
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            product list
+                            FAQ list
                             <a href="{{route('admin.index')}}">home</a></td>
                         </div>
                         <!-- /.panel-heading -->
@@ -38,7 +38,7 @@
                                         <tr>
                                             <td>{{$rs->id}}</td>
                                             <td>{{$rs->question}}</td>
-                                            <td>{{$rs->answer}}</td>
+                                            <td>{{!!$rs->answer!!}}</td>
                                             <td>{{$rs->status}}</td>
                                             <td><a href="{{route('admin.faq.edit',['id'=>$rs->id])}}"class="btn btn-primary btn-xs">Edit</a></td>
                                             <td><a href="{{route('admin.faq.destroy',['id'=>$rs->id])}}"class="btn btn-danger btn-xs"

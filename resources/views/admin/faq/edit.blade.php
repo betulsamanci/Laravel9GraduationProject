@@ -1,4 +1,4 @@
-<?php
+
 @extends('layouts.adminbase')
 
 @section('title','edit faq')

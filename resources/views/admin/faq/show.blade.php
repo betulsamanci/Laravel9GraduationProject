@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
 
-@section('title','show project'.$data->title)
+@section('title','show faq'.$data->title)
 
 @section('content')
 
@@ -16,11 +16,11 @@
 
                 <div class="panel panel-default">
                     <div class="col-md-3">
-                        <td><a href="{{route('admin.project.destroy',['id'=>$data->id])}}"class="btn btn-danger btn-lg"
+                        <td><a href="{{route('admin.faq.destroy',['id'=>$data->id])}}"class="btn btn-danger btn-lg"
                                onclick="return confirm('deleting are you sure?')">delete</a></td>
                     </div>
                     <div class="col-md-16">
-                        <td><a href="{{route('admin.project.edit',['id'=>$data->id])}}"class="btn btn-primary btn-lg ">Edit  </a></td>
+                        <td><a href="{{route('admin.faq.edit',['id'=>$data->id])}}"class="btn btn-primary btn-lg ">Edit  </a></td>
                     </div>
                     <div class="panel-body">
                         <div class="table-responsive">
