@@ -43,8 +43,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
+        <h1>{{Session::get('info')}}</h1>
+                    @include( 'home.messages')
                     <form  id="checkout-form" action="{{route("storemessage")}}" class="clearfix" method="post">
+                       @csrf
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <input class="form-control" placeholder="Name&Surname" type="text" name="name">
