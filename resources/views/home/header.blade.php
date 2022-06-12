@@ -38,7 +38,28 @@
                             <nav class="main-menu">
 
                                 <ul class="menu-area-main">
-
+                                    <li class="dropdown nav-item nav-link" style="color: black ">
+                                        @php
+                                            $mainCategories = \App\Http\Controllers\HomeController::maincategorylist();
+                                        @endphp
+                                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="books-media-list-view.html">Categories</a>
+                                        <ul class="dropdown-menu">
+                                            @foreach($mainCategories as $rs)
+                                                @if(count($rs->children))
+                                                    <li>
+                                                        <a href="{{route('categoryprojects',['id'=>$rs->id, 'slug'=>$rs->title])}}">{{$rs->title}}
+                                                            <i class="bi bi-caret-right-fill"></i></a>
+                                                        <ul>
+                                                            @include('home.categorytree',['children'=>$rs->children])
+                                                        </ul>
+                                                    </li>
+                                                @else
+                                                    <li>
+                                                        <a href="{{route('categoryprojects',['id'=>$rs->id, 'slug'=>$rs->title])}}">{{$rs->title}}</a>
+                                                    </li>
+                                                @endif
+                                            @endforeach
+                                        </ul>
                                     </li>
                                     <li> <a href="{{route('home')}}">Home</a> </li>
                                     <li> <a href="{{route('about')}}">About</a> </li>

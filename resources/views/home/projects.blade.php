@@ -2,8 +2,6 @@
 
 @section('Title','Graduation Project')
 
-
-
 @section('content')
     <div class="product">
         <div class="container">

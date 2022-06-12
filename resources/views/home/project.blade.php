@@ -15,6 +15,13 @@
                         </style>
 
                         <body >
+                        <div c></div>
+                        <div class="tab-content">
+                            <div id="tab1" class="tab-pane fade in active">
+                                <p>{{$data->description}}</p>
+
+                            </div>
+                        </div>
 
                         <div class="w3-content w3-display-container" style="height: 650px;width: 440px">
                             <img class="mySlides" src="{{Storage::url($data->image)}}" style="height: 650px;width: 380px;">
@@ -59,4 +66,5 @@
                 <p> {{$data->description}}</p>
 
                 <p>{!!$data->detail!!}.</p>
-            </div></div></div></div></div></div>
+            </div></div></div></div>
+
