@@ -60,7 +60,7 @@
                 @guest <a class="text-uppercase" href="/loginuser" >Login</a>/<a href="/registeruser" class="text-uppercase">Register</a>
                 @endguest
                 <ul class="custom-menu">
-                    <li><a href="#"><i class="fa fa-user-o"></i>My Account</a></li>
+                    <li><a href="{{route('userpanel.index')}}"><i class="fa fa-user-o"></i>My Account</a></li>
                     <li><a href="#"><i class="fa fa-heart-o"></i>My wishlist</a></li>
                     <li><a href="#"><i class="fa fa-exchange"></i>Compare</a></li>
                     <li><a href="#"><i class="fa fa-check"></i>Checkout</a></li>
