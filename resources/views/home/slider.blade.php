@@ -16,40 +16,7 @@
                     </div>
                 </div>
             @endforeach
-            <div class="carousel-item active">
-                <img class="second-slide" src="{{asset('assets')}}/images/banner2.jpg" alt="Second slide">
-                <div class="container">
-                    <div class="carousel-caption relative">
-                        <h1>Our <br> <strong class="black_bold">Latest </strong><br>
-                            <strong class="yellow_bold">Product </strong></h1>
-                        <p>It is a long established fact that a r <br>
-                            eader will be distracted by the readable content of a page </p>
-                        <a href="#">see more Products</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="third-slide" src="{{asset('assets')}}/images/banner2.jpg" alt="Third slide">
-                <div class="container">
-                    <div class="carousel-caption relative">
-                        <h1>Our <br> <strong class="black_bold">Latest </strong><br>
-                            <strong class="yellow_bold">Product </strong></h1>
-                        <p>It is a long established fact that a r <br>
-                            eader will be distracted by the readable content of a page </p>
-                        <a href="#">see more Products</a>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-        <a class="carousel-control-prev"  role="button" data-slide="prev">
-            <i class='fa fa-angle-right'></i>
-        </a>
-        <a class="carousel-control-next"  role="button" data-slide="next">
-            <i class='fa fa-angle-left'></i>
-        </a>
-
-    </div>
 
 </section>
 <section class="slider_section">

@@ -36,7 +36,10 @@
                     <div class="menu-area">
                         <div class="limit-box">
                             <nav class="main-menu">
+
                                 <ul class="menu-area-main">
+
+                                    </li>
                                     <li> <a href="{{route('home')}}">Home</a> </li>
                                     <li> <a href="{{route('about')}}">About</a> </li>
                                     <li> <a href="{{route('projects')}}">Project</a> </li>

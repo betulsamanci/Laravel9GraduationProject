@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminPanel\AdminProjectController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
+use App\Http\Controllers\AdminPanel\FaqController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
@@ -21,6 +22,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/references',[HomeController::class,'references'])->name('references');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/faq',[HomeController::class, 'faq'])->name('faq');
 
 
 //4-Route-> Controller-> View
