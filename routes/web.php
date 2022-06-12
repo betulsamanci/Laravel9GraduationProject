@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\AdminPanel\AdminProjectController;
 use App\Http\Controllers\AdminPanel\AdminUserController;
+use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 use App\Http\Controllers\AdminPanel\FaqController;
+use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
+use App\Http\Controllers\AdminPanel\MessageController as MessageController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
-use App\Http\Controllers\AdminPanel\CategoryController as AdminCategoryController;
 
 //1-Do Something In Route
 Route::get('/hello', function () {
@@ -24,6 +25,7 @@ Route::get('/references',[HomeController::class,'references'])->name('references
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 Route::get('/blog',[HomeController::class,'blog'])->name('blog');
 Route::get('/faq',[HomeController::class, 'faq'])->name('faq');
+Route::post('/storemessage',[HomeController::class, 'storemessage'])->name('storemessage');
 
 
 //4-Route-> Controller-> View

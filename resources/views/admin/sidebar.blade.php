@@ -20,10 +20,10 @@
                 <a  href="/admin/comment"><i class="fa fa-copy fa-2x"></i> Comments</a>
             </li>
             <li>
-                <a  href="/admin/faq"><i class="fa fa-question fa-2x"></i> FAQ</a>
+                <a  href="{{route('admin.faq.index')}}"><i class="fa fa-question fa-2x"></i> FAQ</a>
             </li>
             <li>
-                <a  href="/admin/message"><i class="fa fa-mail-reply fa-2x"></i> Messages</a>
+                <a  href="{{route('admin.message.index')}}"><i class="fa fa-mail-reply fa-2x"></i> Messages</a>
             </li>
             <li>
                 <a  href="/admin/user"><i class="fa fa-asterisk fa-2x"></i> Users</a>
