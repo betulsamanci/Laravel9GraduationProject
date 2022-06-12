@@ -6,6 +6,6 @@
             </ul>
         </li>
     @else
-        <li><a href="{{route('categorycourses',['id'=>$subcategory->id, 'slug'=>$subcategory->title])}}">{{$subcategory->title}}</a></li>
+        <li><a href="{{route('categoryprojects',['id'=>$subcategory->id, 'slug'=>$subcategory->title])}}">{{$subcategory->title}}</a></li>
     @endif
 @endforeach
