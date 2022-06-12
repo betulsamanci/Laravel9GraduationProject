@@ -38,10 +38,10 @@
                             <nav class="main-menu">
                                 <ul class="menu-area-main">
                                     <li> <a href="{{route('home')}}">Home</a> </li>
-                                    <li> <a href="about.html">About</a> </li>
+                                    <li> <a href="{{route('about')}}">About</a> </li>
                                     <li> <a href="{{route('projects')}}">Project</a> </li>
                                     <li> <a href="blog.html"> Blog</a> </li>
-                                    <li> <a href="contact.html">Contact</a> </li>
+                                    <li> <a href="{{route('contact')}}">Contact</a> </li>
                                     <li>@auth
                                             <a href="/logout" class="text-uppercase"> Logout</a> @endauth </li>
                                 </ul>

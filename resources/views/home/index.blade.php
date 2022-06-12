@@ -5,31 +5,12 @@
 @section('keywords',$setting->keywords)
 @section('icon',Storage::url($setting->icon))
 
-
-
-
-
-
 @section('slider')
     @include("home.slider")
 @endsection
 
 @section('content')
 
-    <!-- CHOOSE  -->
-    <div class="whyschose">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-7 offset-md-3">
-                    <div class="title">
-                        <h2>Why <strong class="black">choose us</strong></h2>
-                        <span>Fastest repair service with best price!</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="choose_bg">
         <div class="container">
             <div class="white_bg">

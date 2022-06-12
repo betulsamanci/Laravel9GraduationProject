@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-16">
                 <h3>fill the new product information below:</h3>
-                <form role="form" action="{{route('admin.product.store')}}" method="post" enctype="multipart/form-data">
+                <form role="form" action="{{route('admin.project.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="from-group">
                         <label>parent category</label>
@@ -27,7 +27,7 @@
                         <select class="form-control select2" name="category_id" style="...">
 
                             @foreach($data as $rs)
-                                <option value="{{$rs->id}}">{{\App\Http\Controllers\admin\categoryController::getparentstree($rs,$rs->title)}}</option>
+                                <option value="{{$rs->id}}">{{\App\Http\Controllers\Admin\CategoryController::getparentstree($rs,$rs->title)}}</option>
                             @endforeach
                         </select>
 
