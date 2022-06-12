@@ -22,6 +22,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/references',[HomeController::class,'references'])->name('references');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
+Route::get('/blog',[HomeController::class,'blog'])->name('blog');
 Route::get('/faq',[HomeController::class, 'faq'])->name('faq');
 
 
@@ -37,6 +38,7 @@ Route::post('/save',[HomeController::class,'save'])->name('save');
 
 Route::get('/project/{id}',[HomeController::class, 'project'])->name('project');
 Route::get('/projects',[HomeController::class, 'projects'])->name('projects');
+Route::get('/categoryprojects/{id}/{slug}',[HomeController::class, 'categoryprojects'])->name('categoryprojects');
 
 Route::view('/loginuser','home.login')->name('loginuser');
 Route::view('/registeruser','home.register')->name('registeruser');
@@ -110,7 +112,7 @@ Route::middleware('admin')->prefix('admin')->name('admin.')->group(function () {
         Route::get('/destroy/{id}','destroy')->name('destroy');
         Route::get('/show/{id}','show')->name('show');
     });
-    //**************************admin product
+    //**************************admin project
     Route::prefix('/user')->name('user.')->controller(AdminUserController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::post('/update/{id}','update')->name('update');

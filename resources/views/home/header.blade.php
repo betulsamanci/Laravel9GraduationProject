@@ -42,7 +42,7 @@
                                         @php
                                             $mainCategories = \App\Http\Controllers\HomeController::maincategorylist();
                                         @endphp
-                                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="books-media-list-view.html">Categories</a>
+                                        <a data-toggle="dropdown" class="dropdown-toggle disabled" href="/">Categories</a>
                                         <ul class="dropdown-menu">
                                             @foreach($mainCategories as $rs)
                                                 @if(count($rs->children))
@@ -61,8 +61,10 @@
                                             @endforeach
                                         </ul>
                                     </li>
+
                                     <li> <a href="{{route('home')}}">Home</a> </li>
                                     <li> <a href="{{route('about')}}">About</a> </li>
+                                    <li> <a href="{{route('references')}}">References</a> </li>
                                     <li> <a href="{{route('projects')}}">Project</a> </li>
                                     <li> <a href="blog.html"> Blog</a> </li>
                                     <li> <a href="{{route('contact')}}">Contact</a> </li>
